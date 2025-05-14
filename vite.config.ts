@@ -10,6 +10,16 @@ export default defineConfig({
     tsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
-    tanstackStart(),
+    tanstackStart({
+      public: {
+        base: '/local_my_tea_collection/ingress'
+      },
+      client: {
+        base: '/local_my_tea_collection/ingress'
+      },
+      serverFns: {
+        base: '/local_my_tea_collection/ingress/api'
+      },
+    }),
   ],
 })
